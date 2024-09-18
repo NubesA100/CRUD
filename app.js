@@ -22,7 +22,7 @@ showInfo()
 
 newUserBtn.addEventListener('click', ()=> {
     submitBtn.innerText = 'Submit',
-    modalTitle.innerText = "Fill the Form"
+    modalTitle.innerText = "Rellena la Forma"
     isEdit = false
     imgInput.src = "./image/Profile Icon.webp"
     form.reset()
@@ -101,13 +101,13 @@ function editInfo(index, pic, name, Age, City, Email, Phone, Post, Sdate){
     post.value = Post,
     sDate.value = Sdate
 
-    submitBtn.innerText = "Update"
-    modalTitle.innerText = "Update The Form"
+    submitBtn.innerText = "Actualizar"
+    modalTitle.innerText = "Actualizar la Forma"
 }
 
 
 function deleteInfo(index){
-    if(confirm("Are you sure want to delete?")){
+    if(confirm("Estas seguro?")){
         getData.splice(index, 1)
         localStorage.setItem("userProfile", JSON.stringify(getData))
         showInfo()
@@ -139,7 +139,7 @@ form.addEventListener('submit', (e)=> {
 
     localStorage.setItem('userProfile', JSON.stringify(getData))
 
-    submitBtn.innerText = "Submit"
+    submitBtn.innerText = "Enviar"
     modalTitle.innerHTML = "Fill The Form"
 
     showInfo()
